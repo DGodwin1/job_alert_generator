@@ -1,0 +1,5 @@
+TODO: 
+1. Allow a user to give me a text file. Read lines from the text file of each URL. 
+2. Take each line and spit out the appropriate HTML. 
+3. Shove this in front of a Flask app. Use the same structure as good books. Have the user paste in a load of URLs. Split on the URLs. Fire off the request data and generate a report. 
+
