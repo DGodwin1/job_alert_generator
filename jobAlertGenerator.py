@@ -25,26 +25,7 @@ def create_snazzy_HTML_block(anchors):
         html.append(job)
 
     # Make sure there's a new line between each HTML anchor.
-    return "<br /> \n".join(html)
+    return "<br/> \n".join(html)
 
-u = "https://www.voguebusiness.com/talent/jobs/high-end-internship-richemont-2373/"
-u1 = "https://www.voguebusiness.com/talent/jobs/high-end-internship-richemont-2373/"
-
-#Generate our soup.
-soup = BeautifulSoup(requests.get(u).text, 'html.parser')
-
-# Get the sweet data
-t = VBT_get_title(soup)
-b = VBT_get_brand(soup)
-l = VBT_get_location(soup)
-
-t1 = VBT_get_title(soup)
-b1 = VBT_get_brand(soup)
-l1 = VBT_get_location(soup)
-
-
-# Create the anchor(s)
-anchors = [generate_job_alert_anchor(t, b, l, u), generate_job_alert_anchor(t1, b1, l1, u1)]
-
-# Create a nice HTML block
-print(create_snazzy_HTML_block(anchors))
+def make_soup(link):
+    return BeautifulSoup(requests.get(link).text, 'html.parser')
