@@ -1,3 +1,8 @@
 body{
-  background-color: #fff1e5;
+  background-color: #f0ede4;
+  font-family: sans-serif;
+}
+
+.submissionField{
+   width : 50%;
 }
