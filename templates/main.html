@@ -6,12 +6,13 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
    </head>
    <body>
-      <p>This is a snazzy site that should help with job alerts</p>
-      <p>Enter the jobs that need to appear in the newsletter. Put a space between each link.</p>
-      <p>I'll do the rest...</p>
+      <h1>Job alert maker thingymabob</h1>
+      <p>This is a snazzy site that should help with job alerts.</p>
+      <p>Enter the jobs that you want to appear in a newsletter.</p>
+      <p>Click 'perform magic' and observe</p>
       <form class="links" action="/links" method="post">
          <input class="submissionField" type="text" name="urls" value="">
-         <input type="submit" value="Submit">
+         <input type="submit" value="perform magic">
       </form>
    </body>
 </html>

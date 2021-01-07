@@ -6,3 +6,8 @@ body{
 .submissionField{
    width : 50%;
 }
+
+.codeResult{
+   background-color: white;
+   font-family: monospace;
+}
