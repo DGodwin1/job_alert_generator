@@ -27,6 +27,8 @@ def links():
         # and make some nice html.
         anchors = []
         for link in links:
+            if not link.startswith("https://www.voguebusiness.com/talent/jobs"):
+                return render_template('error.html', links=", ".join(links), link=link)
             soup = make_soup(link)
             title = VBT_get_title(soup)
             brand = VBT_get_brand(soup)

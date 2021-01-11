@@ -2,18 +2,15 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>Links for newlsetters</title>
-      <link rel="stylesheet" type="text/css" src="{{ url_for('static', filename='css/main.css') }}">
+      <title>Job alert maker | Results | David Godwin</title>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
       <script type="text/javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
    </head>
-   <h1>Job alert maker thingymabob</h1>
+   <h1>Job alert maker</h1>
 
    <body>
-      <p>Copy and paste the below code and place into the newsletter.</p>
+      <p>Copy and paste the code below into a newsletter and you'll be good to go.</p>
       <div class="codeResult">
             <p>{{anchors}}</p>
-      </div>
-
-      <p>And you're good.</p>
-   </body>
+      </div>   </body>
 </html>
