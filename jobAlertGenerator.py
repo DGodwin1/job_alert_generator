@@ -11,6 +11,8 @@ def VBT_get_brand(s):
 
 def VBT_get_location(s):
     # you slice [1::] to skip the brand name in the same div.
+    # todo: FIX this janky thing to look at the title element and pull deets for location out of there. 
+    print(" ".join(s.select("body > main > div.container.job-description > div > div.col > div > div.job-description-header.search-item-body > div.search-item-meta.gold-line.line-equal-height.text-uppercase")[0].get_text().split()[2::]))
     return " ".join(s.select("body > main > div.container.job-description > div > div.col > div > div.job-description-header.search-item-body > div.search-item-meta.gold-line.line-equal-height.text-uppercase")[0].get_text().split()[1::])
 
 def generate_job_alert_anchor(title, brand, location, url):
