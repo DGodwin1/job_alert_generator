@@ -10,12 +10,8 @@ def VBT_get_brand(s):
     return s.select("body > main > div.container.job-description > div > div.col > div > div.job-description-header.search-item-body > div.search-item-meta.gold-line.line-equal-height.text-uppercase > span > a")[0].get_text()
 
 def VBT_get_location(s):
-    # you slice [1::] to skip the brand name in the same div.
-    # todo: FIX this janky thing to look at the title element and pull deets for location out of there.
-
-    #find the index of in.
+    #find the index of 'in' from the title and then pull out the location data from there.
     location = []
-    print("here are the title elements")
     title = s.title.get_text().split()
     start = title.index("in")
 
